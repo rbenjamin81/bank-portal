@@ -82,7 +82,7 @@ class Database():
             result_args = self.cursor.callproc('accountTransactions', args)
             return result_args
   
-    def deleteAccount(self, AccountID):
+    def deleteAccount(self, accountID):
         if self.connection.is_connected():
             self.cursor= self.connection.cursor()
             delete_account_query = "DELETE FROM accounts WHERE accountId = %s"
